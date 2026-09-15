@@ -12,4 +12,4 @@ Pure-Python loop: 1.9490 seconds
 NumPy version:    0.0002 seconds
 NumPy is 11421.14 times faster
 
-Conclusion:from the answer of speed.py, we saw how fast Numpy is instead of pure python loop, that shows when we are working on large simulations, Numpy is much more useful than original, and also there was no problem with atom test, all tests are passed.
+Conclusion:from the answer of speed.py, we saw how fast Numpy is instead of pure python loop, that shows when we are working on large simulations, Numpy is much more useful than original, and also there was no problems with atom decay tests, all tests are passed.
