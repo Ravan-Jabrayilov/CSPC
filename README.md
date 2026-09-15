@@ -1,15 +1,28 @@
 # My Lab Repository
 
-PW1:
+# CSPC - Computer Science for Physics and Chemistry
+My coursework repository. Each practical is under PW<n>/Lab <X>/.
+## Setup
+Create the environment for a given lab:
+conda env create -f PW<n>/Lab\ <X>/environment.yml
+conda activate cspc
+---
+## PW1 - Lab A: Reproducible Foundations
 
-PW1/Lab A/test_decay.py::test_starts_at_N0 PASSED                                                                                         [ 33%]
-PW1/Lab A/test_decay.py::test_rejects_negative_rate PASSED                                                                                [ 66%]
-PW1/Lab A/test_decay.py::test_matches_law PASSED                                                                                          [100%]
+##what i built?
 
-=============================================================== 3 passed in 0.19s ===============================================================
+i built conda environment file, CSPC repository with git, atom decay simulation with the help of speed.py.
+
+##speed comparison:
 
 Pure-Python loop: 1.9490 seconds
 NumPy version:    0.0002 seconds
 NumPy is 11421.14 times faster
 
-Conclusion:from the answer of speed.py, we saw how fast Numpy is instead of pure python loop, that shows when we are working on large simulations, Numpy is much more useful than original, and also there was no problems with atom decay tests, all tests are passed.
+##Tests?
+
+all tests are passed
+
+##Conclusion:
+
+From the answer of speed.py, we saw how fast Numpy is instead of pure python loop, that shows when we are working on large simulations, Numpy is much more useful than original, and also there was no problems with atom decay tests, all tests are passed.
