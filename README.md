@@ -12,9 +12,11 @@ conda activate cspc
 **Pre-Questions:**
 
 **Which pytest tool checks that an error is raised?**
+
 it is pytest.raises(). you can check what you expect and use match 
 
 **Which pytest tool compares floating-point values with a tolerance?**
+
 it is pytest.approx(). it is very useful because if you want to check some calculation and your numbers are float, use approx, because if you dont use it, for example, 0.1+0.2=0.3 will be wrong.
 
 **what i built?**
