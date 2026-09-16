@@ -9,6 +9,14 @@ conda activate cspc
 ---
 ## PW1 - Lab A: Reproducible Foundations
 
+**Pre-Questions:**
+
+**Which pytest tool checks that an error is raised?**
+it is pytest.raises(). you can check what you expect and use match 
+
+**Which pytest tool compares floating-point values with a tolerance?**
+it is pytest.approx(). it is very useful because if you want to check some calculation and your numbers are float, use approx, because if you dont use it, for example, 0.1+0.2=0.3 will be wrong.
+
 **what i built?**
 
 i built conda environment file, CSPC repository with git, atom decay simulation with the help of speed.py.
