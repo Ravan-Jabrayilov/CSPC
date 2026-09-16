@@ -12,25 +12,24 @@ from decay import simulate, simulate_loop
 
 
 def test_starts_at_N0():
-    # at time zero, no atoms have decayed yet
-    assert simulate(1000, 0.4)[0] == 1000
+    assert simulate(1000,0.4)[0]==1000
 
 
 def test_rejects_negative_rate():
     with pytest.raises(ValueError):
-        simulate(1000, -0.4)
+        simulate(1000,-0.4)
 
 
 def test_matches_law():
-    N0 = 1000
-    lam = 0.4
+    N0=1000
+    lam=0.4
 
-    results = []
+    results=[]
     for seed in range(1000):
-        results.append(simulate(N0, lam, seed=seed)[-1])
+        results.append(simulate(N0,lam,seed=seed)[-1])
 
-    average = np.mean(results)
-    t = 0.05 * 200
-    expected = N0 * np.exp(-lam * t)
+    average=np.mean(results)
+    t=0.05*200
+    expected=N0*np.exp(-lam*t)
 
-    assert average == pytest.approx(expected, rel=0.05)
+    assert average==pytest.approx(expected, rel=0.05)
