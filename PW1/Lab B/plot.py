@@ -11,7 +11,7 @@ observed=data[:,1]
 N0=observed[0]
 analytical=N0*np.exp(-LAMBDA*t)
 
-fig, (ax1,ax2)=plt.subplots(1,2,sharex=True,sharey=True,figsize=(10,4))
+fig,(ax1,ax2)=plt.subplots(1,2,sharex=True,sharey=True,figsize=(10,4))
 
 
 ax1.scatter(t,observed,color="tab:blue",label="Observed",zorder=3)
@@ -33,4 +33,4 @@ plt.tight_layout()
 
 
 plt.savefig("figure.png", dpi=300)
-print("Figure saved successfully as figure.png!")
+print("Figure saved successfully as figure.png")
