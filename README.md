@@ -36,3 +36,16 @@ all tests are passed
 **Conclusion:**
 
 From the answer of speed.py, we saw how fast Numpy is instead of pure python loop, that shows when we are working on large simulations, Numpy is much more useful than original, and also there was no problems with atom decay tests, all tests are passed.
+
+
+## PW1 --- Lab B
+
+The observed data showed an exponential decrease over time. The observed
+points are almost same with the analytical decay law
+N(t)=N0e^{-0.3t}, although there were some differences between the measured
+values and the analytical curve.
+
+The Snakemake pipeline automates the generation of the figure by using
+`decay_observed.csv` as input, running `plot.py`, and producing `figure.png` as
+the output. It also avoids from repeating the step when the input files have not changed.
+
