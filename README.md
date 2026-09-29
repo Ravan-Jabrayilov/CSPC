@@ -49,3 +49,13 @@ The Snakemake pipeline automates the generation of the figure by using
 `decay_observed.csv` as input, running `plot.py`, and producing `figure.png` as
 the output. It also avoids from repeating the step when the input files have not changed.
 
+## PW2 --- Lab A
+
+**Mean Acceleration Measured:** 
+approximately -9.81 (confirming free fall).
+
+**Why Acceleration is Noisy:** 
+finding the derivative makes small measurement errors much bigger, so doing it twice turns tiny mistakes into huge jumps in the acceleration.
+
+**What Integrating Back Showed:** 
+integration acts like a running sum where random noise errors cancel each other out, successfully cleaning up the noise and recovering the original position within about 1 metre.
