@@ -74,10 +74,10 @@ starting from x_0=0, all three methods (gradient descent, Newton's method, SLSQP
 * From x_0 = 2, Newton landed on a **minimum** (g>0).
 * **How did the starting point change the result?** the starting point changes everything on a hard landscape because different spots trap the methods in different valleys or hills.
 
-## Part 3: Fit a Reaction Rate (`kinetics.py`)
+## Part 3: Fit a Reaction Rate 
 
 find the rate constant k for a first-order decay C(t)=C_0e^{-kt} by minimizing the squared error between noisy data and the model.
-using `SLSQP`, the fitted rate constant is k approximately 0.25. the generated plot (`kinetics.png`) shows the fitted curve passing closely through the measured data points.
+using SLSQP, the fitted rate constant is k approximately 0.25. the generated plot (kinetics.png) shows the fitted curve passing closely through the measured data points.
 
 ## Part 4 — Chemical Equilibrium
 
