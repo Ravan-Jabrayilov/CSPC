@@ -59,3 +59,63 @@ finding the derivative makes small measurement errors much bigger, so doing it t
 
 **What Integrating Back Showed:** 
 integration acts like a running sum where random noise errors cancel each other out, successfully cleaning up the noise and recovering the original position within about 1 metre.
+
+
+# CSPC - PW2 Lab B: Optimization
+
+## Part 2A: Easy Function f(x) = (x-3)^2 + 1
+starting from x_0=0, all three methods (gradient descent, Newton's method, SLSQP) successfully reach the global minimum at x=3.
+
+## Part 2B: Harder Landscape g(x)=x^4-3x^2+x+5
+
+* **Do the methods agree?** no from x_0=0 (they end up in different places). yes from x_0 = 2 (all methods find the right-side minimum at x approximately 1.140).
+* **Did Newton land on a minimum or maximum?** 
+* From x_0 = 0, Newton landed at x approximately 0.171 where g<0, which is a **maximum**. Newton only looks for slope=0, not a minimum.
+* From x_0 = 2, Newton landed on a **minimum** (g>0).
+* **How did the starting point change the result?** the starting point changes everything on a hard landscape because different spots trap the methods in different valleys or hills.
+
+## Part 3: Fit a Reaction Rate (`kinetics.py`)
+
+find the rate constant k for a first-order decay C(t)=C_0e^{-kt} by minimizing the squared error between noisy data and the model.
+using `SLSQP`, the fitted rate constant is k approximately 0.25. the generated plot (`kinetics.png`) shows the fitted curve passing closely through the measured data points.
+
+## Part 4 — Chemical Equilibrium
+
+for H₂ + I₂ ⇌ 2HI, i found the equilibrium extent x using Newton’s method and SLSQP minimisation. both methods gave approximately x=0.66, giving H2=0.34 mol, I2=0.34 mol, and HI=1.33 mol.
+
+## Part 5 — Titration Equivalence Point
+
+i calculated the slope of the pH curve using np.gradient() and used np.argmax() to find its maximum. The equivalence point was approximately 50 mL, where the pH changes most rapidly.
+
+..............
+
+##Summary:
+
+kinetics:
+
+for the simple function, all three methods—gradient descent, Newton's method, and SLSQP—agreed and found the minimum at x≈3.
+
+for the harder function, the methods did not always agree. newton's method finds a stationary point rather than necessarily a minimum. Starting from x=0, it reached a maximum, while starting from x=2, it reached a minimum. this shows that the starting point and optimisation method can affect the result.
+
+
+the fitted first-order rate constant was:
+
+k≈0.25
+
+equilibrium:
+
+for H2+I2⇌2HI, both Newton's method and SLSQP gave:
+
+    x=0.667
+
+    H2=0.333 mol
+
+    I2=0.333 mol
+
+    HI=1.333 mol
+
+titration:
+
+the calculated titration equivalence point was approximately:
+
+V=50 mL
