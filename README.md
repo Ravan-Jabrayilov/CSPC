@@ -119,3 +119,69 @@ titration:
 the calculated titration equivalence point was approximately:
 
 V=50 mL
+
+##CSPC ------ PW3:
+
+Session 1: characterising the data and normality
+
+1. data loading & subsetting
+
+dataset shape: the heart disease dataset contains 300+ patient rows and multiple columns.
+
+continuous variables: four continuous variables were isolated for analysis: age, chol, trestbps, and thalach.
+
+2. distribution shapes
+
+age: displays symmetric, "bell-shaped" distribution centered.
+
+chol: displays right-skewed distribution, with most values around standard levels and long tail extending toward higher cholesterol measurements.
+
+trestbps: shows moderate right-skew, with the bulk of observations concentrated in normal blood pressure ranges and higher values tapering off.
+
+thalach: features reasonably symmetric distribution spanning across the observed patient heart rate range.
+
+3. normality verdicts and reasoning
+age: considered approximately normal based on visual symmetry around the mean.
+
+chol: considered right-skewed due to the extended right tail. non-parametric methods or transformations should be considered for tests requiring normality.
+
+trestbps: considered right-skewed due to positive skewness.
+
+thalach: considered approximately normal based on balanced, bell-shaped spread.
+
+Session 2: drawing conclusions
+
+4. is the effect real?
+
+hypothesis Test: patients were split into two groups based on the target column to check whether their thalach genuinely differs.
+
+method and result: given that thalach is approximately normally distributed, a standard difference test was applied.
+
+conclusion: patients without heart disease reach a significantly higher maximum heart rate compared to those with heart disease.
+
+uncertainty and visualization: means for both groups were quantified alongside their standard errors and plotted. the visual spread and error bars confirm a clear separation between the two group means.
+
+5. do two things move together?
+
+relationship: the relationship between age and thalach was quantified using correlation analysis.
+
+interpretation: age and thalach exhibit a negative correlation; as age increases, thalach tends to decrease
+
+6. the naive analysis
+
+initial association: upon loading chemicals_cancer.csv, benzene and cadmium were tested for their association with tumour malignancy.
+
+naive conclusion: taken at face value, one of the chemicals appears to have a much stronger association, falsely pointing to it as the primary driver of malignancy.
+
+7. confounding variables and causation reveal
+
+controlling for confounders: a relationship between two variables can be driven by a third confounding variable influencing both. by filtering the dataset to restrict analysis to patients with similar pollution exposure levels, the associations were recomputed.
+
+final verdict: once the confounding variable is accounted for, the naive association vanishes or shifts.
+
+causation vs correlation: the analysis reveals which chemical is the real cause and which one only looked guilty due to confounding.
+
+
+
+
+
